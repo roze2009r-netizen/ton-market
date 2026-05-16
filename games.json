@@ -1,10 +1,10 @@
 {
+  "ibnhashim": "ابن هاشم",
+  "name": "ابن هاشم",
   "status": "success",
-  "success": true,
-  "msg": "Welcome VIP",
-  "message": "Welcome VIP",
+  "title": "العالمية - عمارة VIP",
+  "msg": "أهلاً بك في لودر ابن هاشم المعدل",
   "update": "no",
-  "version": "1.0",
   "data": [
     {
       "name": "العالمية - عمارة VIP",
@@ -12,8 +12,7 @@
       "version": "3.2",
       "link": "https://t.me/idii333",
       "url": "https://t.me/idii333",
-      "is_active": "1",
-      "status": "active"
+      "is_active": "1"
     },
     {
       "name": "الكورية - عمارة VIP",
@@ -21,8 +20,7 @@
       "version": "3.2",
       "link": "https://t.me/idii333",
       "url": "https://t.me/idii333",
-      "is_active": "1",
-      "status": "active"
+      "is_active": "1"
     }
   ]
 }
