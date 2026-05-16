@@ -1,6 +1,9 @@
 {
   "status": "success",
-  "msg": "أهلاً بك في لودر عمارة VIP",
+  "success": true,
+  "msg": "Welcome VIP",
+  "message": "Welcome VIP",
+  "update": "no",
   "version": "1.0",
   "data": [
     {
