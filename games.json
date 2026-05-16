@@ -1,17 +1,17 @@
 {
-  "status": "success",
+  "success": true,
   "data": [
     {
-      "name": "العالمية - عمارة VIP",
+      "title": "العالمية - عمارة VIP",
       "version": "3.2",
-      "url": "https://t.me/idii333",
-      "is_active": true
+      "link": "https://t.me/idii333",
+      "is_active": "1"
     },
     {
-      "name": "الكورية - عمارة VIP",
+      "title": "الكورية - عمارة VIP",
       "version": "3.2",
-      "url": "https://t.me/idii333",
-      "is_active": true
+      "link": "https://t.me/idii333",
+      "is_active": "1"
     }
   ]
 }
