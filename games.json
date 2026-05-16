@@ -1,17 +1,25 @@
 {
-  "success": true,
+  "status": "success",
+  "msg": "أهلاً بك في لودر عمارة VIP",
+  "version": "1.0",
   "data": [
     {
+      "name": "العالمية - عمارة VIP",
       "title": "العالمية - عمارة VIP",
       "version": "3.2",
       "link": "https://t.me/idii333",
-      "is_active": "1"
+      "url": "https://t.me/idii333",
+      "is_active": "1",
+      "status": "active"
     },
     {
+      "name": "الكورية - عمارة VIP",
       "title": "الكورية - عمارة VIP",
       "version": "3.2",
       "link": "https://t.me/idii333",
-      "is_active": "1"
+      "url": "https://t.me/idii333",
+      "is_active": "1",
+      "status": "active"
     }
   ]
 }
